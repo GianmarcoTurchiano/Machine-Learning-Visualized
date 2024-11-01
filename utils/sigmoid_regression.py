@@ -18,7 +18,7 @@ def backward(X, y_true, y_pred):
     grad = error * sigmoid_derivative
     
     # Gradient w.r.t weights
-    grad_weights = grad.T @ X
+    [grad_weights] = grad.T @ X
     
     return grad_weights
 

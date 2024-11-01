@@ -34,7 +34,7 @@ def plot_3D_loss(ax, parameters, gradients, losses, epoch, arrow_color):
 
     ax.plot(weights_1, weights_2, losses, '--', color='silver', zorder=1)
 
-    ax.quiver(epoch_weight, epoch_bias, epoch_loss, -dw, -db, 0, length=3, linewidth=2, color=arrow_color, normalize=True, label='Steepest descent')
+    ax.quiver(epoch_weight, epoch_bias, epoch_loss, -dw, -db, 0, length=1, linewidth=2, color=arrow_color, normalize=True, label='Steepest descent')
 
     ax.plot(weights_1[: epoch +1], weights_2[: epoch +1], losses[: epoch +1], marker='o', markersize=3, label='Epochs', color='seagreen', zorder=3)
 
